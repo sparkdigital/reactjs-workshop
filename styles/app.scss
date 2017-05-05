@@ -1,0 +1,27 @@
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+@import './breakpoints';
+@import './variables';
+
+// Component styles.
+@import '../src/components/DragAndDropArea/dragAndDropArea';
+@import '../src/components/Header/Header';
+@import '../src/components/Loading/loading';
+@import '../src/components/NewsletterComposer/newsletterComposer';
+@import '../src/components/PageContent/pageContent';
+@import '../src/components/Preview/preview';
+
+#app {
+  margin: auto;
+  max-width: 970px;
+  padding: $globalPadding;
+
+  h1 {
+    margin-top: 10px;
+  }
+}
+
+// Bootstrap styles overrides.
+.form-control {
+  border-radius: 0;
+}

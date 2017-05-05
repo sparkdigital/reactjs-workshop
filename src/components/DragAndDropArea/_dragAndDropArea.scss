@@ -1,0 +1,13 @@
+.dragAndDropArea {
+  background: $backgroundGrey;
+  display: flex;
+  justify-content: center;
+  min-height: 400px;
+  width: 100%;
+
+  .fa {
+    align-self: center;
+    color: $lightText;
+    font-size: 5rem;
+  }
+}

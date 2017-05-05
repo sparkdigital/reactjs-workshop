@@ -1,0 +1,16 @@
+.preview {
+
+  .panel-body {
+    padding: 0;
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    min-height: 425px;
+  }
+
+  iframe {
+
+  }
+}

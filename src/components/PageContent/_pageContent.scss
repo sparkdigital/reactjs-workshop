@@ -1,0 +1,6 @@
+.pageContent {
+  
+  @include breakpoint($goDesktop) {
+    flex-direction: row;
+  } 
+}

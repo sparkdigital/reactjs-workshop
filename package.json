@@ -1,0 +1,36 @@
+{
+  "name": "react-workshop-spark-digital",
+  "version": "1.0.0",
+  "description": "React Workshop - Spark Digital",
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint src",
+    "start": "node server.js"
+  },
+  "author": "Patricio Gabriel Maseda <pmaseda@sparkdigital.com>",
+  "devDependencies": {
+    "babel-core": "6.10.4",
+    "babel-loader": "6.0.1",
+    "babel-preset-es2015": "6.9.0",
+    "babel-preset-react": "6.11.1",
+    "babel-preset-stage-0": "6.5.0",
+    "breakpoint-sass": "^2.7.1",
+    "css-loader": "0.23.1",
+    "eslint": "2.7.0",
+    "eslint-plugin-react": "5.2.2",
+    "node-sass": "3.8.0",
+    "redux-devtools": "^3.3.2",
+    "sass-loader": "4.0.0",
+    "style-loader": "0.13.1",
+    "webpack": "1.13.1",
+    "webpack-dev-server": "1.14.1"
+  },
+  "dependencies": {
+    "react": "15.4.2",
+    "react-bootstrap": "^0.30.8",
+    "react-dom": "15.4.2",
+    "react-redux": "^5.0.3",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.6.0"
+  }
+}
