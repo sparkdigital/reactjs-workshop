@@ -1,6 +1,10 @@
-import { createStore } from 'redux';
+import thunkMiddleware from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
 import newsletter from './reducers';
-let store = createStore(newsletter);
+let store = createStore(
+  newsletter,
+  applyMiddleware(thunkMiddleware)
+);
 
 // Every time the state changes, log it.
 store.subscribe(() =>
