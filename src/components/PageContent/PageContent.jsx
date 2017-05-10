@@ -8,8 +8,9 @@ const PageContent = (props) => (
   <div className="pageContent">
     <h1>My Awesome Movies App</h1>
     <div className="pageContent-main">
-      <Preview />
-      <List {...props}/>
+
+        <Preview />
+        <List {...props}/>
     </div>
   </div>
 );
