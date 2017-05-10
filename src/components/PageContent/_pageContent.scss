@@ -1,6 +1,22 @@
 .pageContent {
   
-  @include breakpoint($goDesktop) {
-    flex-direction: row;
-  } 
+  &-main {
+    .preview {
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      min-height: 400px;
+    }
+    
+    @include breakpoint($goDesktop) {
+      display: flex;
+      flex-direction: row;
+      
+      .preview {
+        margin-right: 2%;
+        width: 50%;
+      }
+    } 
+  }
+  
+  
 }
