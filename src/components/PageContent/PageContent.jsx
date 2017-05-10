@@ -9,7 +9,7 @@ const PageContent = (props) => (
     <h1>My Awesome Movies App</h1>
     <div className="pageContent-main">
 
-        <Preview />
+        <Preview selectedMovie={props.selectedMovie}/>
         <List {...props}/>
     </div>
   </div>

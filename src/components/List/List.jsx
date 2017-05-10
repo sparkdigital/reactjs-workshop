@@ -10,7 +10,10 @@ const List = (props) => {
   );
 
   const movies = props.movies.map( (movie) =>{
-    return <ListItem key={movie.imdbId} movie={movie}/>
+    return <ListItem
+      key={movie.imdbId}
+      movie={movie}
+      onSelectMovie={props.onSelectMovie}/>
   });
 
   return (

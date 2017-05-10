@@ -1,5 +1,18 @@
 import React from 'react';
 
-const Preview = (props) => <div className="preview"></div>;
+const Preview = (props) => {
+  if (!props.selectedMovie){
+    return (
+      <div className="preview">
+        Loading...
+      </div>
+    );
+  }
+  return(
+    <div className="preview">
+      {props.selectedMovie.Title}
+    </div>
+  );
+}
 
 export default Preview;

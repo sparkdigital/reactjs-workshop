@@ -6,7 +6,7 @@ import PageContent from '../../components/PageContent/PageContent';
 class App extends Component {
   constructor(props) {
     super(props);
-    
+
     this.state = {
       movies: [
         {
@@ -27,14 +27,17 @@ class App extends Component {
           Year: 2008,
           Poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BOTAyNzMyNDMtYWJjZi00MDEwLThkYWEtYTNlNGUzZDFkYjUyXkEyXkFqcGdeQXVyNzg5OTk2OA@@._V1_SX300.jpg",
         }
-      ]
+      ],
+      selectedMovie: null
     };
   }
-  
+
   render() {
     return (
       <PageContent
-        {...this.state}
+        movies={this.state.movies}
+        onSelectMovie={ (selectedMovie) => this.setState(prevState => ({selectedMovie: selectedMovie, movies: prevState.movies}))}
+        selectedMovie={this.state.selectedMovie}
       />
     );
   }
