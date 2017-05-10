@@ -2,7 +2,6 @@ import React from 'react';
 
 // Components.
 import { Panel } from 'react-bootstrap';
-import Loading from '../Loading/Loading';
 
 const List = (props) => {
 

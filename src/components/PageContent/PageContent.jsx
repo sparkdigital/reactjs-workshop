@@ -5,7 +5,7 @@ import List from '../List/List';
 
 const PageContent = (props) => (
   <div className="pageContent">
-    <List />
+    <List {...props}/>
   </div>
 );
 
