@@ -2,7 +2,7 @@
 
 ## Purposed exercises:
 
-1) Build the needed components in order to render a static movies list. (Using just a state on the component. No redux or store needed).
+1) Build the needed components (“MoviesList” and “Movie”) in order to render a static movies list. (Using just a state on the component. No redux or store needed).
 
 2) Create a simple form in order to edit a movie. It would be rendered on the /edit/:id path (Route is already set on this repo).
 
@@ -14,7 +14,7 @@
 
 6) Add a new edit button for each movie displayed on the list. A new action should be created in order to load the selected movie data on the edit form.
 
-7) Create a new async action in order to fire a POST request to the api and save the data in the form fields.
+7) Create a new async action in order to fire a PUT request to the api and update the data in the form fields.
 
 8) After that action, redirect to the home movies list and perform an update.
 
