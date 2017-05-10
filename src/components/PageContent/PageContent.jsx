@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Components.
-import Preview from '../Preview/Preview';
+import List from '../List/List';
 
 const PageContent = (props) => (
   <div className="pageContent">
-    <Preview />
+    <List />
   </div>
 );
 
