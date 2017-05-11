@@ -10,7 +10,8 @@ const Preview = (props) => {
   }
   return(
     <div className="preview">
-      {props.selectedMovie.Title}
+      <div><img src={props.selectedMovie.Poster}/></div>
+      <div>{props.selectedMovie.Title}</div>
     </div>
   );
 }

@@ -21,3 +21,11 @@
 .form-control {
   border-radius: 0;
 }
+
+.list-group-item-custom{
+  cursor: pointer;
+}
+
+.list-group-item-custom:hover{
+  background-color: #eee;
+}

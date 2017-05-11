@@ -4,7 +4,7 @@ import React from 'react';
 
 const ListItem = (props) => {
   return(
-    <li className="list-group-item" onClick={() => props.onSelectMovie(props.movie)}>
+    <li className="list-group-item list-group-item-custom" onClick={() => props.onSelectMovie(props.movie)}>
       <div className="video-list media">
         <div className="media-left">
           <img className="media-object" src={props.movie.Poster}/>
