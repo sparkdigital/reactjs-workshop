@@ -10,14 +10,8 @@ const List = (props) => {
   );
 
   return (
-    <Panel
-      header={h3}
-      className="preview"
-    >
-      <ul className="preview-content">
-      
+      <ul className="preview-content">  
       </ul>
-    </Panel>
   );
 }
 
