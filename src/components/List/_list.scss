@@ -1,16 +1,22 @@
-.preview {
-
+.list {
   .panel-body {
     padding: 0;
   }
 
   &-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
     min-height: 425px;
+    padding: 5px;
   }
-
-  iframe {
-
+  
+  li {
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    height: 40px;
+    margin-bottom: 5px;
+    padding: 10px;
   }
 }

@@ -7,7 +7,11 @@ class App extends Component {
   constructor(props) {
     super(props);
     
+    this.updateActiveMovieIndex = this.updateActiveMovieIndex.bind(this);
+    
     this.state = {
+      activeMovieIndex: 0,
+      loading: false,
       movies: [
         {
           imdbId: "tt0111161",
@@ -31,10 +35,19 @@ class App extends Component {
     };
   }
   
+  updateActiveMovieIndex(newIndex) {
+    this.setState({
+      activeMovieIndex: newIndex
+    });
+  }
+  
   render() {
     return (
       <PageContent
         {...this.state}
+        actions={{
+          updateActiveMovieIndex: this.updateActiveMovieIndex
+        }}
       />
     );
   }
