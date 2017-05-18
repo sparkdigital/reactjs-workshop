@@ -15,15 +15,20 @@ import { Provider } from 'react-redux';
 
 // Components.
 import App from './containers/App/App';
-import EditionContainer from './containers/EditionContainer/EditionContainer';
+
+const exercise = `Goal to achieve: Considering the previous explanation of actions being
+  passed as a function callback to a component, first goal here is to get the input
+  changes reflected on the (redux) application state. Second goal: re-use the input field
+  to set a movie year and image. At last, we can post the movie into the api. Probably a
+  SMALL refactor on the application state structure could be needed ; )`;
 
 ReactDOM.render(
   <Provider store={store}>
     <Router>
       <div>
         <h1>My awesome movies application</h1>
+        <p>{exercise}</p>
         <Route exact path="/" component={App} />
-        <Route path="/edit/:id" component={EditionContainer} />
       </div>
     </Router>
   </Provider>, 

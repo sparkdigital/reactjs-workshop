@@ -10,19 +10,6 @@ function title(state = '', action) {
   }  
 }
 
-// Header Reducers.
-function headerDate(state = {}, action) {
-  switch (action.type) {
-    case 'UPDATE_HEADER_DATE':
-      return {
-        ...state,
-        date: action.date
-      };
-    default:
-      return state;
-  }
-}
-
 function movies(state = {
   isFetching: false,
   didInvalidate: false,
@@ -47,7 +34,6 @@ function movies(state = {
 }
 
 const newsletter = combineReducers({
-  headerDate,
   title,
   movies
 });

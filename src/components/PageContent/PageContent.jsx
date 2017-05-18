@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Components.
-import List from '../List/List';
+import TitleField from '../TitleField/TitleField';
 
 const PageContent = (props) => (
-  <div className="list">
-    <List {...props} />
+  <div className="pageContent">
+    <TitleField />
   </div>
 );
 

@@ -4,7 +4,7 @@ import { ControlLabel, FormControl, FormGroup, HelpBlock, Panel } from 'react-bo
 // Store.
 import store from '../../store';
 
-const TitleField = ({ onChange, title }) => {
+const TitleField = ({ onChange = () => {}, title = '' }) => {
 
   const handleChange = event => {
     onChange(event.target.value);
@@ -23,8 +23,7 @@ const TitleField = ({ onChange, title }) => {
       />
       <FormControl.Feedback />
       <HelpBlock>
-        {`Is some validation needed here?
-          (check: https://react-bootstrap.github.io/components.html#forms)`}
+        English movie title
       </HelpBlock>
     </FormGroup>
   );
