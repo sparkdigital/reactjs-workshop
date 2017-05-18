@@ -1,10 +1,15 @@
 import { combineReducers } from 'redux';
 
 // Global title.
-function title(state = '', action) {
+function movie(state = {
+  title: '',
+  synopsis: ''
+}, action) {
   switch (action.type) {
     case 'UPDATE_TITLE':
-      return action.title;
+      return Object.assign({}, state, {title: action.title});
+    case 'UPDATE_SYNOPSIS':
+      return Object.assign({}, state, {synopsis: action.synopsis});
     default:
       return state;
   }  
@@ -33,9 +38,9 @@ function movies(state = {
   }
 }
 
-const newsletter = combineReducers({
-  title,
+const movieApp = combineReducers({
+  movie,
   movies
 });
 
-export default newsletter;
+export default movieApp;

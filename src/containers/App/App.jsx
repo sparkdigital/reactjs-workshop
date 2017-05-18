@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React, { Component } from 'react';
 
 // Actions.
-import { fetchMovies, updateTitle } from '../../actions';
+import { fetchMovies, updateTitle, updateSynopsis } from '../../actions';
 
 // Components.
 import PageContent from '../../components/PageContent/PageContent';
@@ -32,6 +32,10 @@ const mapDispatchToProps = (dispatch) => {
       
       fetchMovies: () => {
         dispatch(fetchMovies())
+      },
+
+      updateSynopsis: (text) => {
+        dispatch(updateSynopsis(text))
       }
     }
   }

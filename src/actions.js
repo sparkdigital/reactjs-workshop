@@ -8,6 +8,13 @@ export function updateTitle(text) {
   }
 }
 
+export function updateSynopsis(text) {
+  return {
+    type: 'UPDATE_SYNOPSIS',
+    synopsis: text
+  };
+}
+
 export function updateHeaderTitle(date) {
   return {
     type: 'UPDATE_TITLE',
@@ -49,10 +56,11 @@ export function fetchMovies() {
     // This is not required by thunk middleware, but it is convenient for us.
     return axios
       .get(`http://www.omdbapi.com/?s=terminator`)
-      .then(response =>
+      .then(response => {
         // We can dispatch many times!
-        dispatch(receiveMovies(response.data))
-      )
+        console.log('Obtained movies', response.data);
+        return dispatch(receiveMovies(response.data.Search));
+      })
       .catch(error =>
         console.log('Do something with the error here.', error)
       )

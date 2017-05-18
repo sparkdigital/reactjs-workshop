@@ -4,10 +4,10 @@ import { ControlLabel, FormControl, FormGroup, HelpBlock, Panel } from 'react-bo
 // Store.
 import store from '../../store';
 
-const TitleField = ({ onChange = () => {}, title = '' }) => {
+const MovieField = ({ onPropertyChange = () => {}, movie = {title: '', synopsis: ''} }) => {
 
   const handleChange = event => {
-    onChange(event.target.value);
+    onPropertyChange(event.target.name, event.target.value);
   }
 
   return (
@@ -17,7 +17,8 @@ const TitleField = ({ onChange = () => {}, title = '' }) => {
       <ControlLabel>Title</ControlLabel>
       <FormControl
         type="text"
-        value={title}
+        name="title"
+        value={movie.title}
         placeholder="Enter text"
         onChange={handleChange}
       />
@@ -25,8 +26,20 @@ const TitleField = ({ onChange = () => {}, title = '' }) => {
       <HelpBlock>
         English movie title
       </HelpBlock>
+      <ControlLabel>Synopsis</ControlLabel>
+      <FormControl
+        type="textarea"
+        name="synopsis"
+        value={movie.synopsis}
+        placeholder="Enter text"
+        onChange={handleChange}
+      />
+      <FormControl.Feedback />
+      <HelpBlock>
+        Movie description
+      </HelpBlock>
     </FormGroup>
   );
 } 
 
-export default TitleField;
+export default MovieField;
