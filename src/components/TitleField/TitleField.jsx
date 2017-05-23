@@ -4,7 +4,7 @@ import { ControlLabel, FormControl, FormGroup, HelpBlock, Panel } from 'react-bo
 // Store.
 import store from '../../store';
 
-const TitleField = ({ onChange = () => {}, title = '' }) => {
+const TitleField = ({ onChange = () => {}, searchMovies = () => {}, title = '' }) => {
 
   const handleChange = event => {
     onChange(event.target.value);
@@ -25,8 +25,9 @@ const TitleField = ({ onChange = () => {}, title = '' }) => {
       <HelpBlock>
         English movie title
       </HelpBlock>
+      <button onClick={searchMovies}>Search Movies</button>
     </FormGroup>
   );
-} 
+}
 
 export default TitleField;

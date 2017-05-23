@@ -48,7 +48,7 @@ export function fetchMovies() {
     // In this case, we return a promise to wait for.
     // This is not required by thunk middleware, but it is convenient for us.
     return axios
-      .get(`http://www.omdbapi.com/?s=terminator`)
+      .get(`http://www.omdbapi.com/?apiKey=243e029c&s=terminator`)
       .then(response =>
         // We can dispatch many times!
         dispatch(receiveMovies(response.data))
